@@ -1,3 +1,1 @@
-import Counter from "~/lib/Counter";
-
-export default () => <Counter />;
+export default () => <>web dvelopmet</>;
