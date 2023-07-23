@@ -179,11 +179,20 @@ EOF
 
 mkdir lib
 cat > lib/Counter.tsx << EOF
-import { createSignal, type Component } from "solid-js";
+import { createSignal } from "solid-js";
 
-export default (): Component => {
+export default () => {
   const [count, setCount] = createSignal(0);
-  return <button onclick={() => setCount(current => current + 1)} class="btn btn-primary">{count()}</button>;
+  return (
+    <div class="flex h-screen w-full items-center justify-center">
+      <button
+        onclick={() => setCount((current) => current + 1)}
+        class="btn btn-primary btn-lg"
+      >
+        {count()}
+      </button>
+    </div>
+  );
 };
 EOF
 
@@ -191,7 +200,7 @@ mkdir routes
 cat > routes/index.tsx << EOF
 import Counter from "~/lib/Counter";
 
-export default () => <div class="w-full h-full flex items-center justify-center"><Counter /></div>;
+export default () => <Counter />;
 EOF
 
 cd ..

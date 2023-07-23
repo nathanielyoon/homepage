@@ -1,4 +1,3 @@
-import { Navigate } from "solid-start";
+import Counter from "~/lib/Counter";
 
-export default () => <>Hello!</>
-// export default () => <Navigate href="/init.sh" />;
+export default () => <Counter />;
