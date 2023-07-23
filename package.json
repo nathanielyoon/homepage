@@ -1,0 +1,37 @@
+{
+  "name": "homepage",
+  "scripts": {
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "start": "solid-start start"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@cloudflare/workers-types": "latest",
+    "@tailwindcss/typography": "latest",
+    "@types/node": "latest",
+    "autoprefixer": "latest",
+    "daisyui": "latest",
+    "postcss": "latest",
+    "prettier": "latest",
+    "prettier-plugin-tailwindcss": "latest",
+    "solid-start-cloudflare-pages": "latest",
+    "solid-start-node": "latest",
+    "tailwindcss": "latest",
+    "ts-node": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  },
+  "dependencies": {
+    "@solidjs/meta": "latest",
+    "@solidjs/router": "latest",
+    "firebase": "latest",
+    "solid-js": "latest",
+    "solid-start": "latest",
+    "undici": "latest"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
+

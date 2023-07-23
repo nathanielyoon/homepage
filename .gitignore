@@ -1,0 +1,9 @@
+.directory
+*debug.log
+.vscode
+
+dist
+.solid
+.output
+/node_modules
+
