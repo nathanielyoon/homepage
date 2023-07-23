@@ -107,10 +107,10 @@ EOF
 
 mkdir public
 cat > public/favicon.svg << EOF
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" stroke-width="1" stroke="#000" fill="#ffe135" stroke-linecap="round">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" stroke-width="2" stroke="#000" fill="#ffe135" stroke-linecap="round">
   <path d="M1,8 a7,7,0 1,0 14,0 a7,7 0,1,0 -14,0" />
-  <path d="M6,9.5 v0.2 m4,-0.2 v0.2" />
-  <path d="M5,5 a5,7 0,0,1 6,0" />
+  <path d="M6,10 v0.2 m4,-0.2 v0.2" />
+  <path d="M5,6 a5,7 0,0,1 6,0" />
 </svg>
 EOF
 
@@ -191,7 +191,7 @@ mkdir routes
 cat > routes/index.tsx << EOF
 import Counter from "~/lib/Counter";
 
-export default () => <Counter />;
+export default () => <div class="w-full h-full flex items-center justify-center"><Counter /></div>;
 EOF
 
 cd ..

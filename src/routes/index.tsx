@@ -1,3 +1,4 @@
 import { Navigate } from "solid-start";
 
-export default () => <Navigate href="/init.sh" />;
+export default () => <>Hello!</>
+// export default () => <Navigate href="/init.sh" />;
