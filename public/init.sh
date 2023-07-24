@@ -1,17 +1,12 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
-  read -p "directory: " directory
-else
-  directory=$1
-fi
-
-mkdir $directory
-cd $directory
+cd /home/nathaniel/desktop
+mkdir new
+cd new
 
 cat > package.json << EOF
 {
-  "name": "$directory",
+  "name": "",
   "scripts": {
     "dev": "solid-start dev",
     "build": "solid-start build",
@@ -37,7 +32,6 @@ cat > package.json << EOF
   "dependencies": {
     "@solidjs/meta": "latest",
     "@solidjs/router": "latest",
-    "firebase": "latest",
     "solid-js": "latest",
     "solid-start": "latest",
     "undici": "latest"
@@ -71,7 +65,6 @@ EOF
 cat > tsconfig.json << EOF
 {
   "include": ["src/**/*"],
-  "exclude": ["functions/**/*"],
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -82,7 +75,7 @@ cat > tsconfig.json << EOF
     "jsx": "preserve",
     "strict": true,
     "types": ["solid-start/env", "@cloudflare/workers-types"],
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
     }
@@ -97,9 +90,7 @@ import cloudflare from "solid-start-cloudflare-pages";
 export default defineConfig({
   plugins: [
     solid({
-      adapter: cloudflare({
-        envPath: true,
-      }),
+      adapter: cloudflare({}),
     }),
   ],
 });
